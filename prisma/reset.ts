@@ -1,6 +1,9 @@
 import { db } from "./db";
 
 async function main() {
+  // NEVER ALLOW THIS OUTSIDE THE TEST ENVIRONMENT!!!
+  if (process.env.NODE_ENV !== "test") return;
+
   await db.post.deleteMany({});
   // Ta bort från alla tabeller
 }
