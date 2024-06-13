@@ -20,6 +20,10 @@
     "seed": "tsx prisma/seed.ts"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/icons-material": "^5.15.20",
+    "@mui/material": "^5.15.20",
     "@prisma/client": "^5.15.0",
     "cross-env": "^7.0.3",
     "dotenv-cli": "^7.4.2",
