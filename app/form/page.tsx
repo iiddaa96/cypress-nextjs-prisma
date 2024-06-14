@@ -9,7 +9,7 @@ export default function AddPostForm() {
 
   //   const save = () => {
 
-  //     addNewProduct(newPost);
+  //     addNewPost(newPost);
   //     router.push("/");
 
   //     if (!addNewPost) {

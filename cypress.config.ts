@@ -30,4 +30,6 @@ async function reseed() {
       content: "Parfym är gott",
     },
   });
+
+  return null;
 }

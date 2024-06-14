@@ -1,7 +1,7 @@
 describe("template spec", () => {
   beforeEach(() => {
-    cy.exec("npm run reset && npm run seed");
     cy.task("reseed");
+    // cy.visit("/");
   });
 
   // Kollar om sidan laddas

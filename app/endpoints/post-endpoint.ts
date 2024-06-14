@@ -1,5 +1,8 @@
+"use server";
+
 import { db } from "@/prisma/db";
-import { Post } from "@prisma/client";
+import { Prisma } from "@prisma/client";
+import { revalidatePath } from "next/cache";
 
 export async function getAllPost() {
   try {
@@ -10,11 +13,12 @@ export async function getAllPost() {
   }
 }
 
-export async function addNewPost(newPost: Post) {
+export async function addNewPost(newPost: Prisma.PostCreateInput) {
   try {
     await db.post.create({
       data: newPost,
     });
+    revalidatePath("/");
   } catch (error) {
     console.error("Failed to add new post");
     throw new Error("Failed to add new post");
@@ -28,6 +32,7 @@ export async function deletePost(id: number) {
         id,
       },
     });
+    revalidatePath("/");
   } catch (error) {
     console.error("Failed to delete post");
     throw new Error("Failed to delete post");

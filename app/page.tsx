@@ -1,6 +1,7 @@
 import { db } from "@/prisma/db";
 import { CardMedia } from "@mui/material";
 import Link from "next/link";
+import DeleteButton from "./components/DeleteButton";
 import Header from "./components/Header";
 
 export default async function Home() {
@@ -30,14 +31,7 @@ export default async function Home() {
                   <h3 className="text-lg font-semibold text-primary">
                     {post.title}
                   </h3>
-                  <button
-                    // onClick={() => handleDelete(post.id)}
-                    className={
-                      "mt-4 w-full py-2 px-4 text-red-700 font-bold rounded border-2"
-                    }
-                  >
-                    Ta bort
-                  </button>
+                  <DeleteButton post={post} />
                 </div>
               </div>
             </div>
