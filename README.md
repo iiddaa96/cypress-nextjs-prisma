@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Inlämning - End-To-End
 
-## Getting Started
+## I den här laborationen ska du individuellt skapa en webbapplikation vars funktionalitet ska testas med Cypress E2E automatiserade testar. Vad du skapar för typ av applikation är valfritt, rekommendationen är att du skapar en NextJS app men vill du utforska andra ramverk så går det också bra.Du ska planera och skriva ner de huvudsakliga användarflödena för din applikation och skriva automatiserade E2E tester för dessa. Det ska skrivas tester på den förväntade användningen men även på vad som sker om användaren gör fel, ex matar in felaktiga värden.InlämningFör att bli godkänd på den här uppgiften MÅSTE du använda GIT och GitHub. Inlämningen sker som vanligt via läroplattformen. I din projektmapp ska det finnas (utöver all kod) en README.md fil. Den ska innehålla en titel, beskrivning av projektet, info om hur projektet byggs, körs och testas.PresentationDu ska i samband med inlämning hålla i en presentation där du presenterar din webbapplikation. Du ska även presentera din användarflöden och berätta varför du har skapat just dessa, samt hur du har genomfört och strukturerat ditt arbete. Dessutom ska presentationen innefatta en reflekterande del. Du har ca 10 min på dig.
 
-First, run the development server:
+Jag har skapat en simpel applikation som är en parfym blogg där du lägger till och kan ta bort inlägg via ett formulär samt se mer beskrivning på en singel sida.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Verktyg
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Prisma
+- NextJS
+- MUI
+- Typescript
+- React
+- Tailwind
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Krav för godkänt:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Webbapplikationen är ett fullstack projekt med frontend, backend och databas
+2. Dina användarflöden fungerar och är kontrollerade av automaterade E2E tester
+3. Testerna körs mot en egen test databas.
+4. Git & GitHub har använts
+5. Projektmappen innehåller en README.md fil - (läs ovan för mer info)
+6. Uppgiften lämnas in i tid!
+7. Muntlig presentation är genomfördKrav
 
-## Learn More
+### För väl godkänt:
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Alla punkter för godkänt är uppfyllda
+2. Dina användarflöden testas omfattande
+3. Mockning används på en relevant och nödvändigt sätt
