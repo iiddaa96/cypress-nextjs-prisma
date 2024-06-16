@@ -18,4 +18,17 @@ describe("template spec", () => {
     cy.visit("/");
     cy.get(".grid").children().should("have.length", 1);
   });
+
+  // Kolla om man kan ta bort en post på startsidan
+  it("should be able to delete a post", () => {
+    cy.visit("/");
+    cy.get(".grid").children().should("have.length.at.least", 1);
+    cy.get(".grid")
+      .first()
+      .within(() => {
+        cy.contains("Ta bort").click();
+      });
+    cy.wait(1000);
+    cy.get(".grid").children().should("have.length", 0);
+  });
 });
