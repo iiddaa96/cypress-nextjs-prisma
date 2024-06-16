@@ -12,4 +12,10 @@ describe("template spec", () => {
     // Det gör vi inte här, spelar det någon roll?
     cy.getById("title").contains("Parfym blogg").should("be.visible");
   });
+
+  // Kollar att det finns en lista med posts
+  it("should have a list of posts", () => {
+    cy.visit("/");
+    cy.get(".grid").children().should("have.length", 1);
+  });
 });
