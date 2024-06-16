@@ -6,7 +6,7 @@ import { useState } from "react";
 import { addNewPost } from "../endpoints/post-endpoint";
 
 const AddPostForm = () => {
-  const router = useRouter(); // Skapa en instans av useRouter
+  const router = useRouter();
 
   const [title, setTitle] = useState("");
   const [image, setImage] = useState("");
@@ -24,7 +24,7 @@ const AddPostForm = () => {
     try {
       await addNewPost(newPost);
       console.log("Post added successfully!");
-      router.push("/"); // Navigera till startsidan efter att inlägget har lagts till
+      router.push("/");
     } catch (error) {
       console.error("Failed to add new post:", error);
     }
