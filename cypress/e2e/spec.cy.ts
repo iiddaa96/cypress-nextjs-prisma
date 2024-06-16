@@ -1,24 +1,15 @@
 describe("template spec", () => {
   beforeEach(() => {
     cy.task("reseed");
-    // cy.visit("/");
   });
 
-  // Kollar om sidan laddas
-  it("passes", () => {
+  it("should have the brand inside an h1 tag", () => {
     cy.visit("/");
-    cy.get("h1").contains("Welcome to my Blog").should("be.visible");
-  });
+    // Om vi skriver så här så säkerställer
+    // vi att det är en h1
+    cy.get("h1").contains("Parfym blogg").should("be.visible");
 
-  // Kollar om det går att ta bort ett inlägg
-  it("removes a post", () => {
-    cy.visit("/");
-    cy.get("h1").contains("Welcome to my Blog").should("be.visible");
-  });
-
-  // Kollar om det går att ta bort ett inlägg
-  it("adds a post", () => {
-    cy.visit("/");
-    cy.get("h1").contains("Welcome to my Blog").should("be.visible");
+    // Det gör vi inte här, spelar det någon roll?
+    cy.getById("title").contains("Parfym blogg").should("be.visible");
   });
 });

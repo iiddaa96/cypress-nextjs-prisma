@@ -11,7 +11,9 @@ export default async function Home() {
     <>
       <Header />
       <main className="flex flex-col items-center justify-between p-4">
-        <h1 className="text-3xl mb-10 font-bold">Parfym blogg</h1>
+        <h1 className="text-3xl mb-10 font-bold" data-cy="title">
+          Parfym blogg
+        </h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full">
           {posts.map((post) => (
