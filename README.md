@@ -4,6 +4,8 @@ I den här laborationen ska du individuellt skapa en webbapplikation vars funkti
 
 Jag har skapat en simpel applikation som är en parfym blogg där du lägger till och kan ta bort inlägg via ett formulär samt se mer beskrivning på en singel sida.
 
+---
+
 ### Verktyg
 
 - Prisma
