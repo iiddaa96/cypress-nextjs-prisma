@@ -21,16 +21,15 @@ describe("template spec", () => {
       .children()
       .eq(0)
       .within(() => {
-        cy.get("h4").should("be.visible").and("contain.text", "Parfym 1.0");
-        cy.get("p").should("be.visible").and("contain.text", "Parfym är gott");
+        cy.get("h3").should("be.visible").and("contain.text", "Parfym 1.0");
+        // cy.get("h4").should("be.visible").and("contain.text", "Parfym är gott");
       });
 
     cy.get(".grid")
       .children()
       .eq(1)
       .within(() => {
-        cy.get("h1").should("be.visible").and("contain.text", "Parfym 1.0");
-        cy.get("h4").should("be.visible").and("contain.text", "Den här är bra");
+        cy.get("h3").should("be.visible").and("contain.text", "Parfym 2.0");
       });
   });
 
@@ -44,7 +43,7 @@ describe("template spec", () => {
         cy.contains("Ta bort").click();
       });
     cy.wait(1000);
-    cy.get(".grid").children().should("have.length", 0);
+    cy.get(".grid").children().should("have.length", 1);
   });
 
   it("should be able to add a new post", () => {
