@@ -1,4 +1,4 @@
-import { Box, CardMedia, Grid, Typography } from "@mui/material";
+import { Box, CardMedia, Grid } from "@mui/material";
 import { Post } from "@prisma/client";
 import Header from "./Header";
 
@@ -51,12 +51,8 @@ export default function SingelPost({ post }: Props) {
         </Grid>
         <Grid item xs={12} sm={6}>
           <Box sx={{ flexGrow: 1, padding: "70px 10px" }}>
-            <Typography variant="h4" gutterBottom>
-              {post.title}
-            </Typography>
-            <Typography variant="body2" gutterBottom>
-              {post.content}
-            </Typography>
+            <h1>{post.title}</h1>
+            <h4>{post.content}</h4>
           </Box>
         </Grid>
       </Grid>

@@ -13,10 +13,20 @@ export async function reseed() {
     where: { id: 1 },
     update: {},
     create: {
-      title: "Parfym 2.0",
+      title: "Parfym 1.0",
       image:
         "https://images.unsplash.com/photo-1718068838055-3a8311f0e8ba?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       content: "Parfym är gott",
+    },
+  });
+  await db.post.upsert({
+    where: { id: 2 },
+    update: {},
+    create: {
+      title: "Parfym 2.0",
+      image:
+        "https://images.unsplash.com/photo-1589493676751-8f4a014d95e5?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      content: "Det här är bra",
     },
   });
 
