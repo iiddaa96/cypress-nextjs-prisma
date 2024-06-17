@@ -51,10 +51,15 @@ export default function SingelPost({ post }: Props) {
         </Grid>
         <Grid item xs={12} sm={6}>
           <Box sx={{ flexGrow: 1, padding: "70px 10px" }}>
-            <h1>{post.title}</h1>
-            <h4>{post.content}</h4>
+            <h1 style={{ fontSize: "2.4rem", fontWeight: "bold" }}>
+              {post.title}
+            </h1>
+            <h4 style={{ fontSize: "1.2rem", fontStyle: "italic" }}>
+              {post.content}
+            </h4>
           </Box>
         </Grid>
+        000
       </Grid>
     </main>
   );
