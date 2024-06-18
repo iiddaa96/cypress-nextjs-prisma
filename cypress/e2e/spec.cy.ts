@@ -54,14 +54,14 @@ describe("template spec", () => {
     // Användaren besöker sidan och klickar på "lägg till ett nytt inlägg"-knappen och skriver in ett nytt inlägg i formuläret som visas. När användaren är klar klickar hen på spara knappen och kommer tillbaka till startsidan och ser det nya inlägget.
 
     const imageUrl =
-      "https://images.unsplash.com/photo-1572246538688-3f326dca3951?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+      "https://wwd.com/wp-content/uploads/2021/12/best-perfumes.jpg";
 
     cy.get("header").contains("Add Post").click();
     cy.url().should("include", "/form");
 
     cy.get("input[name='image']").type(imageUrl);
     cy.get("input[name='title']").type("Test, Ny Parfym");
-    cy.get("input[name='content']").type("Test, Beskrivning av ny parfym");
+    cy.get("textarea[name='content']").type("Test, Beskrivning av ny parfym");
     // cy.get("[data-cy='image-input']").type("ny-parfym.jpg");
 
     cy.contains("Spara").click();
