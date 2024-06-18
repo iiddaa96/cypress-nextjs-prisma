@@ -47,6 +47,7 @@ describe("template spec", () => {
   it("should be able to add a new post", () => {
     // Användaren besöker sidan och klickar på "lägg till ett nytt inlägg"-knappen och skriver in ett nytt inlägg i formuläret som visas. När användaren är klar klickar hen på spara knappen och kommer tillbaka till startsidan och ser det nya inlägget.
 
+    // Hjälp med att kolla add post i hedaer ???
     cy.get("header").contains("add post").should("be.visible");
     cy.get("header").contains("add post").click();
     cy.url().should("include", "/form");
@@ -58,19 +59,13 @@ describe("template spec", () => {
 
     cy.contains("Spara").click();
 
-    // cy.url().should("not.include", "/add-post");
+    // cy.url().should("not.include", "/add-post"); // Hur skriver man ??
     cy.get(".grid").children().should("have.length", 3);
     cy.get(".grid")
       .children()
       .last()
       .within(() => {
-        cy.get("img")
-          .should("be.visible")
-          .and("have.attr", "src")
-          .and((src) => {
-            // Kollar att src är en giltig URL
-            expect(src).to.match(/^https?:\/\/.+/);
-          });
+        cy.get("img").should("be.visible").and("have.attr", "src");
         cy.get("h1").should("be.visible").and("contain.text", "Ny Parfym");
       });
   });
@@ -83,7 +78,7 @@ describe("template spec", () => {
       .should("be.visible")
       .and("have.attr", "src")
       .and((src) => {
-        expect(src).to.match(/^https?:\/\/.+/);
+        expect(src).to.match(/^https?:\/\/.+/); // Undrar om man kan skriva så ??
       });
 
     cy.get("h1").should("be.visible").and("contain.text", "Parfym 1.0");
