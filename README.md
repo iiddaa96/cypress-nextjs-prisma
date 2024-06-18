@@ -4,6 +4,13 @@ I den här laborationen ska du individuellt skapa en webbapplikation vars funkti
 
 Jag har skapat en simpel applikation som är en parfym blogg där du lägger till och kan ta bort inlägg via ett formulär samt se mer beskrivning på en singel sida.
 
+#### Cypress tester
+
+- Användaren besöker sidan och ser en header samt en lista med inlägg. Inläggen innehåller en bild, en titel. Användaren kan klicka på en post för att se mer information om den.
+- Användaren klickar in sig på en post och ser en bild, en titel och en beskrivning av posten.
+- Användaren besöker sidan och ser en lista med inlägg. Användaren klickar på en "ta bort"-knapp på en post och posten tas bort från sidan.
+- Användaren besöker sidan och klickar på "lägg till ett nytt inlägg"-knappen och skriver in ett nytt inlägg i formuläret som visas. När användaren är klar klickar hen på spara knappen och kommer tillbaka till startsidan och ser det nya inlägget.
+
 ---
 
 ### Verktyg
@@ -14,6 +21,7 @@ Jag har skapat en simpel applikation som är en parfym blogg där du lägger til
 - Typescript
 - React
 - Tailwind
+- Cypress
 
 ### Krav för godkänt:
 
