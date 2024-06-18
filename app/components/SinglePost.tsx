@@ -59,7 +59,6 @@ export default function SingelPost({ post }: Props) {
             </h4>
           </Box>
         </Grid>
-        000
       </Grid>
     </main>
   );
