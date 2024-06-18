@@ -4,16 +4,28 @@ import Image from "next/image";
 import Link from "next/link";
 import MiddleImage from "./assets/flower.jpg";
 import DeleteButton from "./components/DeleteButton";
-import Header from "./components/Header";
 
 export default async function Home() {
   const posts = await db.post.findMany({});
 
   return (
     <>
-      <Header />
-      <main className="flex flex-col items-center justify-between mt-6 text ">
-        <h1 className="text-3xl mb-10 font-bold" data-cy="title">
+      <main
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <h1
+          style={{
+            fontSize: "2rem",
+            fontWeight: "bold",
+            marginTop: "-6.4rem",
+            fontFamily: "Playwrite CO, sans-serif",
+            backgroundColor: "#ffe1e1",
+          }}
+        >
           Ida´s parfym blogg
         </h1>
 
@@ -24,6 +36,7 @@ export default async function Home() {
             position: "relative",
             paddingTop: "20%",
             margin: "32px auto",
+            overflow: "hidden",
             display: "flex",
             alignItems: "center",
             marginBottom: "24px",

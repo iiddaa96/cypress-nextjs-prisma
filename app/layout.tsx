@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -16,7 +18,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        <Header />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Playwrite+CO:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+        <main
+          style={{
+            paddingTop: "140px", // Lägger till en padding för att undvika att headern täcker page
+          }}
+        >
+          {children}
+        </main>
+        <Footer />
+      </body>
     </html>
   );
 }

@@ -69,7 +69,14 @@ const AddPostForm = () => {
         sx={{ width: "100%", marginBottom: "20px" }}
       />
       <Box sx={{ display: "flex", gap: "5vh" }}>
-        <Button type="submit" variant="contained" sx={{ width: "150px" }}>
+        <Button
+          type="submit"
+          sx={{
+            width: "150px",
+            color: "#ef83be",
+            border: "5px solid #ec4fae77",
+          }}
+        >
           <SaveIcon fontSize="large" />
           Spara
         </Button>
