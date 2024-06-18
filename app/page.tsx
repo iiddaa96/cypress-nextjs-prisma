@@ -1,6 +1,8 @@
 import { db } from "@/prisma/db";
-import { CardMedia } from "@mui/material";
+import { Box, CardMedia } from "@mui/material";
+import Image from "next/image";
 import Link from "next/link";
+import MiddleImage from "./assets/flower.jpg";
 import DeleteButton from "./components/DeleteButton";
 import Header from "./components/Header";
 
@@ -10,10 +12,30 @@ export default async function Home() {
   return (
     <>
       <Header />
-      <main className="flex flex-col items-center justify-between p-4">
+      <main className="flex flex-col items-center justify-between mt-6 text ">
         <h1 className="text-3xl mb-10 font-bold" data-cy="title">
-          Parfym blogg
+          Ida´s parfym blogg
         </h1>
+
+        <Box
+          sx={{
+            width: "99%",
+            justifyContent: "center",
+            position: "relative",
+            paddingTop: "20%",
+            margin: "32px auto",
+            display: "flex",
+            alignItems: "center",
+            marginBottom: "24px",
+          }}
+        >
+          <Image
+            src={MiddleImage}
+            alt="Stor Bild"
+            layout="fill"
+            objectFit="cover"
+          />
+        </Box>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full">
           {posts.map((post) => (

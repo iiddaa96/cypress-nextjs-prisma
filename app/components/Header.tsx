@@ -56,10 +56,10 @@ function ResponsiveAppBar() {
             sx={{
               display: { xs: "none", md: "inline-block" },
               marginRight: "30rem",
-              fontSize: "1.5rem",
+              fontSize: "1.3rem",
             }}
           >
-            Blogg
+            Ida´s blogg
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -94,7 +94,7 @@ function ResponsiveAppBar() {
                   padding: "10px",
                 }}
               >
-                Blogg
+                Ida´s blogg
               </Typography>
             </Box>
             <Menu
@@ -118,24 +118,16 @@ function ResponsiveAppBar() {
               <Button component={Link} href="/AddPostForm" color="inherit">
                 Add Post
               </Button>
-              <Button component={Link} href="/contact" color="inherit">
-                Contact
-              </Button>
-              <Button component={Link} href="/favorite" color="inherit">
-                Favorite
-              </Button>
             </Menu>
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {/* Tillfälliga länkar till andra sidor desktop */}
-            <Button component={Link} href="/form" color="inherit">
+            <Button
+              sx={{ marginLeft: "45rem" }}
+              component={Link}
+              href="/form"
+              color="inherit"
+            >
               Add Post
-            </Button>
-            <Button component={Link} href="/contact" color="inherit">
-              Contact
-            </Button>
-            <Button component={Link} href="/favorite" color="inherit">
-              Favorite
             </Button>
           </Box>
 
