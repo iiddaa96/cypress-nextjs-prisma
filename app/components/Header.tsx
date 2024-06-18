@@ -115,7 +115,7 @@ function ResponsiveAppBar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              <Button component={Link} href="/AddPostForm" color="inherit">
+              <Button component={Link} href="/form" color="inherit">
                 Add Post
               </Button>
             </Menu>

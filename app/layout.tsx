@@ -17,8 +17,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" style={{ height: "100%" }}>
+      <body
+        style={{ display: "flex", flexDirection: "column", minHeight: "100%" }}
+      >
         <Header />
         <link
           href="https://fonts.googleapis.com/css2?family=Playwrite+CO:wght@400;700&display=swap"
@@ -26,6 +28,7 @@ export default function RootLayout({
         />
         <main
           style={{
+            flex: 1,
             paddingTop: "140px", // Lägger till en padding för att undvika att headern täcker page
           }}
         >
