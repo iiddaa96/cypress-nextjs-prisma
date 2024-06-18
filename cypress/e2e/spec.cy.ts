@@ -13,7 +13,7 @@ describe("template spec", () => {
       .children()
       .eq(0)
       .within(() => {
-        cy.get("h3").should("be.visible").and("contain.text", "Parfym 1.0");
+        cy.get("h3").should("be.visible").and("contain.text", "Armani");
       });
     cy.get(".grid")
       .children()
@@ -34,8 +34,13 @@ describe("template spec", () => {
         expect(src).to.match(/^https?:\/\/.+/);
       });
 
-    cy.get("h1").should("be.visible").and("contain.text", "Parfym 1.0");
-    cy.get("h4").should("be.visible").and("contain.text", "Parfym är gott");
+    cy.get("h1").should("be.visible").and("contain.text", "Armani");
+    cy.get("h4")
+      .should("be.visible")
+      .and(
+        "contain.text",
+        "En perfekt lyxig gåva till någon du älskar. Denna kvinnliga doft kombinerar tre doftnoter: svartvinbärsnektar, modern chypre samt vit mysk med trätoner och inslag av fresia och majorrosdoft. Flaskan symboliserar kvinnlig reflektion, motsatsen mellan styrka och lätthet där transparens, svart densitet och ljus ros balanserar i perfekt harmoni. Denna parfym har skapats för den moderna kvinnan som är stark och feminin, sofistikerad samt karismatisk."
+      );
   });
 
   it("should be able to delete a post", () => {

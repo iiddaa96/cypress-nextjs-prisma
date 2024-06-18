@@ -13,10 +13,11 @@ export async function reseed() {
     where: { id: 1 },
     update: {},
     create: {
-      title: "Parfym 1.0",
+      title: "Armani",
       image:
-        "https://images.unsplash.com/photo-1718068838055-3a8311f0e8ba?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      content: "Parfym är gott",
+        "https://image-resizing.booztcdn.com/giorgio-armani/gail4390300_cnocolorcode_12.webp?has_grey=0&has_webp=0&dpr=2.5&size=w400",
+      content:
+        "En perfekt lyxig gåva till någon du älskar. Denna kvinnliga doft kombinerar tre doftnoter: svartvinbärsnektar, modern chypre samt vit mysk med trätoner och inslag av fresia och majorrosdoft. Flaskan symboliserar kvinnlig reflektion, motsatsen mellan styrka och lätthet där transparens, svart densitet och ljus ros balanserar i perfekt harmoni. Denna parfym har skapats för den moderna kvinnan som är stark och feminin, sofistikerad samt karismatisk.",
     },
   });
   await db.post.upsert({
