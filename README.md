@@ -24,6 +24,7 @@ Ibland får man reloada 1-2 gånger, men testerna ska vara gröna.
 - React
 - Tailwind
 - Cypress
+- CSS
 
 ### Krav för godkänt:
 
