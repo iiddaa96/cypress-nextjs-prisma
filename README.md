@@ -6,6 +6,8 @@ Jag har skapat en simpel applikation som är en parfym blogg där du lägger til
 
 #### Cypress tester
 
+Ibland får man reloada 1-2 gånger, men testerna ska vara gröna.
+
 - Användaren besöker sidan och ser en header samt en lista med inlägg. Inläggen innehåller en bild, en titel. Användaren kan klicka på en post för att se mer information om den.
 - Användaren klickar in sig på en post och ser en bild, en titel och en beskrivning av posten.
 - Användaren besöker sidan och ser en lista med inlägg. Användaren klickar på en "ta bort"-knapp på en post och posten tas bort från sidan.
