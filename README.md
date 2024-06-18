@@ -31,7 +31,7 @@ Jag har skapat en simpel applikation som är en parfym blogg där du lägger til
 4. Git & GitHub har använts (✓)
 5. Projektmappen innehåller en README.md fil - (läs ovan för mer info) (✓)
 6. Uppgiften lämnas in i tid! (✓)
-7. Muntlig presentation är genomfördKrav (✓)
+7. Muntlig presentation är genomförd (✓)
 
 ### För väl godkänt:
 
