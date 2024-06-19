@@ -26,6 +26,12 @@ Ibland får man reloada 1-2 gånger, men testerna ska vara gröna.
 - Cypress
 - CSS
 
+### Installation
+
+1. npm install
+2. npm test - köra igång testerna
+3. npm run dev - dev servern
+
 ### Krav för godkänt:
 
 1. Webbapplikationen är ett fullstack projekt med frontend, backend och databas (✓)
