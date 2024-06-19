@@ -32,7 +32,7 @@ Ibland får man reloada 1-2 gånger, men testerna ska vara gröna.
 2. Dina användarflöden fungerar och är kontrollerade av automaterade E2E tester (✓)
 3. Testerna körs mot en egen test databas. (✓)
 4. Git & GitHub har använts (✓)
-5. Projektmappen innehåller en README.md fil - (läs ovan för mer info) (✓)
+5. Projektmappen innehåller en README.md fil (✓)
 6. Uppgiften lämnas in i tid! (✓)
 7. Muntlig presentation är genomförd (✓)
 

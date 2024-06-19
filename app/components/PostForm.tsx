@@ -1,6 +1,6 @@
 "use client";
 import SaveIcon from "@mui/icons-material/Save";
-import { Box, Button, TextField, Typography } from "@mui/material";
+import { Box, Button, TextField } from "@mui/material";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { addNewPost } from "../endpoints/post-endpoint";
@@ -32,12 +32,15 @@ const AddPostForm = () => {
 
   return (
     <>
-      <Typography
-        sx={{ textAlign: "center", marginTop: "-6rem", marginBottom: "2rem" }}
-        variant="h5"
+      <h1
+        style={{
+          marginTop: "-6rem",
+          marginBottom: "2rem",
+          textAlign: "center",
+        }}
       >
         Skapa ett nytt inlägg
-      </Typography>
+      </h1>
       <Box
         component="form"
         onSubmit={handleSubmit}

@@ -8,6 +8,8 @@ describe("template spec", () => {
     // Användaren besöker sidan och ser en header samt en lista med inlägg. Inläggen innehåller en bild, en titel. Användaren kan klicka på en post för att se mer information om den.
     cy.get("header").should("exist").and("be.visible");
 
+    cy.get("h1").should("be.visible").and("contain.text", "Ida´s parfym blogg");
+
     cy.get(".grid").children().should("have.length", 2);
     cy.get(".grid")
       .children()
@@ -43,18 +45,6 @@ describe("template spec", () => {
       );
   });
 
-  it("should be able to delete a post", () => {
-    // Användaren besöker sidan och ser en lista med inlägg. Användaren klickar på en "ta bort"-knapp på en post och posten tas bort från sidan.
-    cy.get(".grid").children().should("have.length.at.least", 1);
-    cy.get(".grid")
-      .first()
-      .within(() => {
-        cy.contains("Ta bort").click();
-      });
-    cy.wait(1000);
-    cy.get(".grid").children().should("have.length", 1);
-  });
-
   it("should be able to add a new post", () => {
     // Användaren besöker sidan och klickar på "lägg till ett nytt inlägg"-knappen och skriver in ett nytt inlägg i formuläret som visas. När användaren är klar klickar hen på spara knappen och kommer tillbaka till startsidan och ser det nya inlägget.
 
@@ -62,6 +52,9 @@ describe("template spec", () => {
       "https://wwd.com/wp-content/uploads/2021/12/best-perfumes.jpg";
 
     cy.get("header").contains("Add Post").click();
+    cy.get("h1")
+      .should("be.visible")
+      .and("contain.text", "Skapa ett nytt inlägg");
     cy.url().should("include", "/form");
 
     cy.get("input[name='image']").type(imageUrl);
@@ -82,5 +75,17 @@ describe("template spec", () => {
           .should("be.visible")
           .and("contain.text", "Test, Ny Parfym");
       });
+  });
+
+  it("should be able to delete a post", () => {
+    // Användaren besöker sidan och ser en lista med inlägg. Användaren klickar på en "ta bort"-knapp på en post och posten tas bort från sidan.
+    cy.get(".grid").children().should("have.length.at.least", 1);
+    cy.get(".grid")
+      .first()
+      .within(() => {
+        cy.contains("Ta bort").click();
+      });
+    cy.wait(1000);
+    cy.get(".grid").children().should("have.length", 1);
   });
 });
